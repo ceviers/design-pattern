@@ -18,8 +18,10 @@ public class Main {
             System.out.println(type);
         }
 
-        // 使用策略模式
+
         var requestType = RequestType.A;
+
+        // 使用策略模式
         Map<RequestType, RequestHandleStrategy> requestStrategy = new HashMap<>();
 
         ServiceLoader<RequestHandleStrategy> loader = ServiceLoader.load(RequestHandleStrategy.class);
